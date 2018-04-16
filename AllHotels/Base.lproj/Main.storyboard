@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,64 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AllHotels" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ararat" translatesAutoresizingMaskIntoConstraints="NO" id="uAM-kn-4AJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Armenia . . . " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQR-HJ-vLZ">
+                                <rect key="frame" x="16" y="95" width="343" height="61"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.044955149292945862" green="0.13351905345916748" blue="0.037780202925205231" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="q8l-WS-8VT">
+                                <rect key="frame" x="69" y="569" width="236" height="48"/>
+                                <subviews>
+                                    <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJu-gQ-b7g">
+                                        <rect key="frame" x="0.0" y="0.0" width="103" height="48"/>
+                                        <color key="backgroundColor" red="0.040092278271913528" green="0.098099373281002045" blue="0.054350331425666809" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Log In">
+                                            <color key="titleColor" red="0.86338537931442261" green="0.96452087163925171" blue="0.93537598848342896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pq5-EM-u2R">
+                                        <rect key="frame" x="133" y="0.0" width="103" height="48"/>
+                                        <color key="backgroundColor" red="0.040092278271913528" green="0.098099373281002045" blue="0.054350331425666809" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" red="0.86338537931442261" green="0.96452087163925171" blue="0.93537598848342896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fQR-HJ-vLZ" firstAttribute="centerX" secondItem="uAM-kn-4AJ" secondAttribute="centerX" id="6Vu-ST-CRW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="q8l-WS-8VT" secondAttribute="bottom" constant="50" id="7SD-yW-W33"/>
+                            <constraint firstItem="uAM-kn-4AJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AG5-Mq-522"/>
+                            <constraint firstItem="fQR-HJ-vLZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BEV-1p-iQK"/>
+                            <constraint firstAttribute="trailing" secondItem="uAM-kn-4AJ" secondAttribute="trailing" id="EAl-f9-Th8"/>
+                            <constraint firstItem="uAM-kn-4AJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QBI-Hr-pji"/>
+                            <constraint firstItem="uAM-kn-4AJ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZjA-Lr-7Dh"/>
+                            <constraint firstItem="uAM-kn-4AJ" firstAttribute="top" secondItem="fQR-HJ-vLZ" secondAttribute="bottom" constant="-156" id="p7E-cw-IJA"/>
+                            <constraint firstItem="fQR-HJ-vLZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="qAo-dR-9uv"/>
+                            <constraint firstItem="q8l-WS-8VT" firstAttribute="centerX" secondItem="uAM-kn-4AJ" secondAttribute="centerX" id="xRv-9L-lpf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ararat" width="1080" height="1080"/>
+    </resources>
 </document>
